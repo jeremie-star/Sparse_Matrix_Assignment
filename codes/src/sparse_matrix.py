@@ -1,4 +1,3 @@
-
 class InvalidMatrixFormat(Exception):
     pass
 
@@ -93,17 +92,17 @@ def main():
         choice = input("Enter choice (1/2/3/4): ")
 
         if choice == '4':
-            print("Goodbye!")
+            print("Thanks For being with us!!!")
             break
 
         try:
             A = SparseMatrix.from_file('../../sample_input/matrixfile1.txt')
             B = SparseMatrix.from_file('../../sample_input/matrixfile3.txt')
 
-            # Debugging: Show matrix dimensions
-            print(f"\nLoaded matrices:")
-            print(f"Matrix A: {A.rows} x {A.cols}")
-            print(f"Matrix B: {B.rows} x {B.cols}")
+            # # Debugging: Show matrix dimensions
+            # print(f"\nLoaded matrices:")
+            # print(f"Matrix A: {A.rows} x {A.cols}")
+            # print(f"Matrix B: {B.rows} x {B.cols}")
 
             if choice == '1':
                 C = A + B
