@@ -1,7 +1,6 @@
 class InvalidMatrixFormat(Exception):
     pass
 
-
 class SparseMatrix:
     def __init__(self, rows=0, cols=0):
         self.rows = rows
@@ -74,12 +73,8 @@ class SparseMatrix:
         return result
 
     def display(self):
-        for r in range(self.rows):
-            row = []
-            for c in range(self.cols):
-                row.append(str(self.get_element(r, c)))
-            print(" ".join(row))
-
+        for (r, c), v in self.data.items():
+            print(f"({r}, {c}) = {v}")
 
 # CLI for interaction
 def main():
@@ -98,11 +93,6 @@ def main():
         try:
             A = SparseMatrix.from_file('../../sample_input/matrixfile1.txt')
             B = SparseMatrix.from_file('../../sample_input/matrixfile3.txt')
-
-            # # Debugging: Show matrix dimensions
-            # print(f"\nLoaded matrices:")
-            # print(f"Matrix A: {A.rows} x {A.cols}")
-            # print(f"Matrix B: {B.rows} x {B.cols}")
 
             if choice == '1':
                 C = A + B
