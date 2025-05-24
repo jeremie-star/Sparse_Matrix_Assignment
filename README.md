@@ -14,8 +14,8 @@ The matrices are loaded from text files and represented efficiently in memory us
 
 ```bash
 .
-├── main.py                 # Main CLI application
-├── sparse_matrix.py        # Contains SparseMatrix class
+├── codes/src               # First sample matrix file
+│   └──  sparse_matrix.py   # Main CLI application and Contains SparseMatrix class
 ├── sample_input/
 │   ├── matrix1.txt         # First sample matrix file
 │   └── matrix2.txt         # Second sample matrix file
